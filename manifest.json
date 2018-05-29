@@ -1,0 +1,17 @@
+{
+  "name": "Gazeta.pl comments blocker",
+  "description": "Comments Block Extension",
+  "version": "1.0",
+  "manifest_version": 2,
+  "browser_action": {
+    "default_popup": "hello.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [{
+    "matches": ["*://gazeta.pl/*", "*://*.gazeta.pl/*", "*://sport.pl/*", "*://*.sport.pl/*"],
+    "js": ["jquery-3.3.1.min.js", "content.js"]
+  }],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
